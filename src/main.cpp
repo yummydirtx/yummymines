@@ -17,3 +17,10 @@
     along with yummymines.  If not, see <https://www.gnu.org/licenses/>.
 
 */
+
+int main() {
+    // intro
+    // generate mines
+    // generate sweeper map
+    // let ai have a whack at it
+}
