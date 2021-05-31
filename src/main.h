@@ -18,18 +18,5 @@
 
 */
 
-#include "main.h"
-
-int main() {
-    auto vec = genMines();
-    for (int x = 0; x < 10; x++) {
-        for (int y = 0; y < 10; y++) {
-            std::cout << vec[x][y] << " ";
-        }
-        std::cout << '\n';
-    }
-    // intro
-    // generate mines
-    // generate sweeper map
-    // let ai have a whack at it
-}
+#include <iostream>
+#include "engine/mgen.h"
