@@ -19,5 +19,6 @@
 */
 
 #include "../lib/random.hpp"
+#include <vector>
 
-int genMines();
+std::vector<std::vector<int>> genMines();

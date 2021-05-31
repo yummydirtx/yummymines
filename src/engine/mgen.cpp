@@ -20,9 +20,9 @@
 
 #include "mgen.h"
 
-int genMines() {
+std::vector<std::vector<int>> genMines() {
     // blank mines to begin with
-    int mines[10][10]{
+    std::vector<std::vector<int>> mines{
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0},
@@ -34,5 +34,5 @@ int genMines() {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0}
     };
-
+    return mines;
 }
