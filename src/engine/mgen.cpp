@@ -21,6 +21,9 @@
 #include "mgen.h"
 
 std::vector<std::vector<int>> genMines() {
+    bool jobDone{false};
+    int randX;
+    int randY;
     // blank mines to begin with
     std::vector<std::vector<int>> mines{
         {0,0,0,0,0,0,0,0,0,0},
@@ -34,5 +37,16 @@ std::vector<std::vector<int>> genMines() {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0}
     };
+    for (int x = 0; x < 10; x++) {
+        jobDone = false;
+        while (!jobDone) {
+            randX = Random::get(0,9);
+            randY = Random::get(0,9);
+            if (mines[randX][randY] == 0) {
+                mines[randX][randY] = 1;
+                jobDone = true;
+            }
+        }
+    }
     return mines;
 }

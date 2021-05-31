@@ -21,4 +21,6 @@
 #include "../lib/random.hpp"
 #include <vector>
 
+using Random = effolkronium::random_static;
+
 std::vector<std::vector<int>> genMines();
