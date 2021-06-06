@@ -40,6 +40,7 @@ std::vector<std::vector<int>> genMines() {
     for (int x = 0; x < 10; x++) {
         jobDone = false;
         while (!jobDone) {
+            // Randomly generate positions
             randX = Random::get(0,9);
             randY = Random::get(0,9);
             if (mines[randX][randY] == 0) {
