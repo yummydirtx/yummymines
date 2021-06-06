@@ -51,3 +51,28 @@ std::vector<std::vector<int>> genMines() {
     }
     return mines;
 }
+
+std::vector<std::vector<int>> genMap(std::vector<std::vector<int>> mines) {
+    // Count up the bombs
+    int nearbyBombs{0};
+    std::vector<std::vector<int>> map{
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0}
+    };
+    for (int x = 0; x < 10; x++) {
+        for (int y = 0; y < 10; y++) {
+            nearbyBombs = 0;
+            
+            continue;
+        }
+    }
+    return map;
+}
