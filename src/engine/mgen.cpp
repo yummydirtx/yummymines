@@ -114,7 +114,7 @@ std::vector<std::vector<int>> genMap(std::vector<std::vector<int>> mines) {
                     nearbyBombs++;
                 }
             }
-            map[x][y] == nearbyBombs;
+            map[x][y] = nearbyBombs;
         }
     }
     return map;
