@@ -70,8 +70,51 @@ std::vector<std::vector<int>> genMap(std::vector<std::vector<int>> mines) {
     for (int x = 0; x < 10; x++) {
         for (int y = 0; y < 10; y++) {
             nearbyBombs = 0;
-            
-            continue;
+            if (mines[x][y] == 1) {
+                map[x][y] == -1;
+                continue;
+            }
+            if (x > 0) {
+                if (mines[x-1][y] == 1) {
+                    nearbyBombs++;
+                }
+                if (y > 0) {
+                    if (mines[x-1][y-1] == 1) {
+                        nearbyBombs++;
+                    }
+                }
+                if (y < 9) {
+                    if (mines[x-1][y+1] == 1) {
+                        nearbyBombs++;
+                    }
+                }
+            }
+            if (y > 0) {
+                if (mines[x][y-1] == 1) {
+                    nearbyBombs++;
+                }
+            }
+            if (x < 9) {
+                if (mines[x+1][y] == 1){
+                    nearbyBombs++;
+                }
+                if (y < 9) {
+                    if (mines[x+1][y+1] == 1) {
+                        nearbyBombs++;
+                    }
+                }
+                if (y > 0) {
+                    if (mines[x+1][y-1] == 1) {
+                        nearbyBombs++;
+                    }
+                }
+            }
+            if (y < 9) {
+                if (mines[x][y+1]) {
+                    nearbyBombs++;
+                }
+            }
+            map[x][y] == nearbyBombs;
         }
     }
     return map;
