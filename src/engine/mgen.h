@@ -26,3 +26,5 @@ using Random = effolkronium::random_static;
 std::vector<std::vector<int>> genMines();
 
 std::vector<std::vector<int>> genMap(std::vector<std::vector<int>> mines);
+
+std::vector<std::vector<int>> genPlayMap();
